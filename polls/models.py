@@ -5,7 +5,7 @@ from django.utils import timezone
 # Create your models here.
 
 class Question(models.Model):
-    question_text = models.CharField(max_length=200)
+    question_text = models.CharField(max_length = 200)
     pub_date = models.DateTimeField('date published')
     
     def __str__(self):
@@ -21,4 +21,5 @@ class Choice(models.Model):
     votes = models.IntegerField(default=0)
     
     def __str__(self):
-        return self.choice_text
+        return self.choice_text 
+    
